@@ -308,6 +308,7 @@ public final class FaceTrackerActivity extends AppCompatActivity {
         public void onNewItem(int faceId, Face item) {
             mFaceGraphic.setId(faceId);
 
+
             if (item.getIsSmilingProbability()>0.5){
                 mCameraSource.takePicture(null, new CameraSource.PictureCallback() {
                     private File imageFile;
